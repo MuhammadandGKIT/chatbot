@@ -79,7 +79,7 @@ class QontakController extends Controller
                 'Authorization' => 'Bearer JCXvkjGiACxo4DGiHg8zMpBc3-WPP_eCVSVl9DtTl4Q',
                 'Content-Type'  => 'application/json',
             ])->post('https://service-chat.qontak.com/api/open/v1/messages/whatsapp', [
-                'room_id' => 'fad6f866-fef2-42ff-8f4b-9bca4d81b172392923',
+                'room_id' => 'fad6f866-fef2-42ff-8f4b-9bca4d81b172',
                 'type'    => 'text',
                 'text'    => $answer,
             ]);
