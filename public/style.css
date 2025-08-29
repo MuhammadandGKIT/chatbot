@@ -1,0 +1,359 @@
+/* === Navbar Styles === */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0.8rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #262626;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #262626;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #f6004a;
+  }
+  
+  /* === General Body === */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+  }
+  
+  /* === General Container (Default) === */
+  .container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* === Edit Profile Specific Container === */
+  .edit-profile-container {
+    max-width: 700px;
+    margin: 100px auto 40px auto; /* Add top margin for spacing from sticky navbar */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+  }
+  
+  /* === Title === */
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  /* === Edit Profile Form === */
+  .edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .edit-profile-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .edit-profile-form input[type="text"],
+  .edit-profile-form input[type="password"],
+  .edit-profile-form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 97%;
+  }
+  
+  .edit-profile-form button {
+    padding: 12px;
+    background-color: #f60052;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .edit-profile-form button:hover {
+    background-color: #007dc1;
+  }
+  
+  /* === Profile View === */
+  .profile {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 2px solid #dbdbdb;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+  
+  .username {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .join-info {
+    color: #8e8e8e;
+    font-size: 14px;
+  }
+  
+  /* === Tabs === */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    margin-top: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: #262626;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #262626;
+  }
+  
+  .tab-content {
+    display: none;
+    padding-top: 20px;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* === Grid / Gallery === */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* === Upload === */
+  .upload-form {
+    text-align: center;
+  }
+  
+  .upload-form input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .upload-form button {
+    padding: 10px 20px;
+    background-color: #f6003e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* === Feed (Optional) === */
+  .feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  /*login.html*/
+  .login-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .app-logo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: 'Billabong', cursive;
+  }
+  
+  .login-form input {
+    width: 90%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    background-color: #f60052;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover {
+    background-color: #db0037;
+  }
+  
+  .separator {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #8e8e8e;
+    position: relative;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    height: 1px;
+    width: 40%;
+    background: #dbdbdb;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .separator::before {
+    left: 0;
+  }
+  
+  .separator::after {
+    right: 0;
+  }
+  
+  .social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #385185;
+    cursor: pointer;
+  }
+  
+  .social-login img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .forgot-password {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+  
+  .forgot-password a {
+    color: #00376b;
+    text-decoration: none;
+  }
+  
+  .signup-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 350px;
+    font-size: 14px;
+  }
+  
+  .signup-box a {
+    color: #f6005e;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

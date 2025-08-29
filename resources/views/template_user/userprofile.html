@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Pengguna - Feeds</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">PhotoShare</div>
+      <div class="nav-links">
+        <a href="userfeed.html" class="nav-link">Feeds</a>
+        <a href="usereditprofil.html" class="nav-link">Edit Profil</a>
+        <a href="#" class="nav-link" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="profile">
+      <img src= "https://picsum.photos/300?random=6" alt="Avatar" class="avatar">
+      <div class="profile-info">
+        <h2 class="username">afianada</h2>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('photos')">Foto</button>
+      <button class="tab" onclick="switchTab('upload')">Unggah</button>
+    </div>
+
+    <div id="photos" class="tab-content active">
+      <div class="grid" id="photoGrid">
+        <!-- Foto akan dimuat di sini -->
+      </div>
+    </div>
+
+    <div id="upload" class="tab-content">
+      <form class="upload-form" onsubmit="uploadPhoto(event)">
+        <input type="file" id="photoInput" accept="image/*" required>
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

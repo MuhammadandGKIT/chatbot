@@ -1,0 +1,88 @@
+<!-- feed.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Feed </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">PhotoShare</div>
+          <div class="nav-links">
+            <a href="userprofile.html" class="nav-link">Profile</a>
+            <a href="#" class="nav-link" onclick="logout()">Logout</a>
+          </div>
+        </div>
+      </nav>
+  <div class="container">
+    <h1 class="title">Feeds</h1>
+    <div class="feed" id="feedContainer">
+      <!-- Feed pengguna akan dimuat di sini -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log("DOM loaded");
+
+    const dummyFeed = [
+      {
+        username: 'afianada',
+        photoUrl: 'https://picsum.photos/300?random=7'
+      },
+      {
+        username: 'narumi',
+        photoUrl: 'https://picsum.photos/300?random=8'
+      },
+      {
+        username: 'hirotaka',
+        photoUrl: 'https://picsum.photos/300?random=9'
+      }
+    ];
+
+    function loadFeed() {
+      console.log("Loading feed...");
+      const container = document.getElementById('feedContainer');
+      container.innerHTML = ''; // Clear any existing feed items
+
+      dummyFeed.forEach(user => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const img = document.createElement('img');
+        img.src = user.photoUrl;
+        img.classList.add('profile-photo');
+        img.style.cursor = 'pointer';
+
+        const info = document.createElement('div');
+        info.className = 'profile-info';
+        info.innerHTML = `<h2 class="username" style="cursor:pointer">${user.username}</h2>`;
+
+        // Event click untuk img & username
+        img.addEventListener('click', () => {
+          localStorage.setItem('selectedUser', JSON.stringify(user));
+          window.location.href = 'userprofile.html';
+        });
+
+        info.querySelector('.username').addEventListener('click', () => {
+          localStorage.setItem('selectedUser', JSON.stringify(user));
+          window.location.href = 'userprofile.html';
+        });
+
+        card.appendChild(img);
+        card.appendChild(info);
+        container.appendChild(card);
+      });
+    }
+
+    loadFeed();   // Load the feed with other users' photos
+  });
+
+  </script>
+</body>
+</html>

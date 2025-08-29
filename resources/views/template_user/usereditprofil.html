@@ -1,0 +1,41 @@
+<!-- edit-profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profil - PhotoShare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">PhotoShare</div>
+      <div class="nav-links">
+        <a href="userfeed.html" class="nav-link">Feeds</a>
+        <a href="userprofile.html" class="nav-link">Profil</a>
+        <a href="#" class="nav-link" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="edit-profile-container">
+    <h1 class="title">Edit Profil</h1>
+    <form class="edit-profile-form" onsubmit="saveProfile(event)">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Nama pengguna" required>
+
+      <label for="avatar">Foto Profil</label>
+      <input type="file" id="avatar" name="avatar" accept="image/*">
+
+      <label for="password">Password Baru</label>
+      <input type="password" id="password" name="password" placeholder="Password baru">
+
+      <button type="submit">Simpan Perubahan</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
